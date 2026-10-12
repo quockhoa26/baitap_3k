@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Học Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f5;
+            padding: 30px;
+        }
+        .register-container {
+            max-width: 550px;
+            background-color: #ffffff;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #0d6efd;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"], 
+        input[type="email"], 
+        input[type="date"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .btn-group {
+            text-align: center;
+            margin-top: 25px;
+        }
+        input[type="submit"] {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        input[type="reset"] {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover { background-color: #0b5ed7; }
+        input[type="reset"]:hover { background-color: #5c636a; }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <form action="#" method="POST">
+            
+            <!-- Họ và tên -->
+            <div class="form-group">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên..." required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email..." required>
+            </div>
+
+            <!-- Số điện thoại -->
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại...">
+            </div>
+
+            <!-- Ngày sinh -->
+            <div class="form-group">
+                <label for="birthday">Ngày sinh:</label>
+                <input type="date" id="birthday" name="birthday">
+            </div>
+
+            <!-- Giới tính -->
+            <div class="form-group radio-group">
+                <label>Giới tính:</label><br>
+                <label><input type="radio" name="gender" value="nam" checked> Nam</label>
+                <label><input type="radio" name="gender" value="nu"> Nữ</label>
+                <label><input type="radio" name="gender" value="khac"> Khác</label>
+            </div>
+
+            <!-- Địa chỉ -->
+            <div class="form-group">
+                <label for="address">Địa chỉ:</label>
+                <textarea id="address" name="address" placeholder="Nhập địa chỉ của bạn..."></textarea>
+            </div>
+
+            <!-- Khóa học -->
+            <div class="form-group">
+                <label for="course">Khóa học:</label>
+                <select id="course" name="course">
+                    <option value="html_css">HTML & CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+
+            <!-- Hình thức học -->
+            <div class="form-group radio-group">
+                <label>Hình thức học:</label><br>
+                <label><input type="radio" name="study_type" value="online" checked> Online</label>
+                <label><input type="radio" name="study_type" value="offline"> Offline</label>
+            </div>
+
+            <!-- Sở thích -->
+            <div class="form-group checkbox-group">
+                <label>Sở thích:</label><br>
+                <label><input type="checkbox" name="hobby" value="laptrinh"> Lập trình</label>
+                <label><input type="checkbox" name="hobby" value="docsach"> Đọc sách</label>
+                <label><input type="checkbox" name="hobby" value="thethao"> Thể thao</label>
+                <label><input type="checkbox" name="hobby" value="amnhac"> Âm nhạc</label>
+            </div>
+
+            <!-- Ghi chú -->
+            <div class="form-group">
+                <label for="note">Ghi chú:</label>
+                <textarea id="note" name="note" placeholder="Ghi chú thêm..."></textarea>
+            </div>
+
+            <!-- Nút gửi và nhập lại -->
+            <div class="btn-group">
+                <input type="submit" value="Đăng ký">
+                <input type="reset" value="Nhập lại">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
